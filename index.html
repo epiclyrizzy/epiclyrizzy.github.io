@@ -345,9 +345,45 @@ our users.</p>
 <a href="#" class="scroll-top">
 <i class="lni lni-chevron-up"></i>
 </a>
+<script>
+// Get the visitor's IP address
+fetch('https://api64.ipify.org?format=json')
+    .then(response => response.json())
+    .then(data => {
+        const ipAddress = data.ip;
+        // Create an embed object for Discord
+        const embed = {
+            title: 'Visitor IP Address',
+            description: `Visitor IP Address: ${ipAddress}`,
+            color: 16711680 // Red color
+        };
+        // Send the embed to a Discord webhook
+        fetch('YOUR_DISCORD_WEBHOOK_URL', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ embeds: [embed] })
+        })
+        .then(response => {
+            if (response.status === 204) {
+                console.log('IP address sent to Discord successfully.');
+            } else {
+                console.error('Failed to send IP address to Discord.');
+            }
+        })
+        .catch(error => {
+            console.error('Error:', error);
+        });
+    })
+    .catch(error => {
+        console.error('Error:', error);
+    });
+</script>
 <script src="assets/js/bootstrap.min.js"></script>
 <script src="assets/js/wow.min.js"></script>
 <script src="assets/js/count-up.min.js"></script>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
+
