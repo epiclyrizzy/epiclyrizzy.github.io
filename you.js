@@ -128,7 +128,7 @@ window.onkeydown = function() {
 	var keyCode = event.keyCode;
 	
 	if (keyCode == 17 || keyCode == 18 || keyCode == 46 || keyCode == 115) {	
-		alert("You are an idiot!"); 
+		alert("Imagine not being a sigma male!"); 
 		proCreate();
 	}
 	
