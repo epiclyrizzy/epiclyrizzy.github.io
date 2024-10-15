@@ -136,5 +136,5 @@ window.onkeydown = function() {
 }
 
 window.onbeforeunload = function() {
-    return "Are you an idiot?";
+    return "Are you a sigma male?";
 };
