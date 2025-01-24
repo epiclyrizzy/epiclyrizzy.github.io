@@ -1,33 +1,217 @@
-<html><head>
-		<title>You are a sigma male!</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rec Room Admin Panel</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    transition: background-color 0.1s, color 0.1s;
+}
+.container {
+    display: flex;
+    min-height: 100vh;
+}
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    display: block;
+}
+.sidebar a:hover, .sidebar a.active {
+    background-color: #34495e;
+}
+.content {
+    flex: 1;
+    padding: 20px;
+    background-color: white;
+    transition: background-color 0.1s, color 0.1s;
+}
+.tab-content {
+    display: none;
+}
+.tab-content.active {
+    display: block;
+}
+.button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #2980b9;
+}
+h1 {
+    color: #2c3e50;
+}
+.notification {
+    padding: 10px;
+    background-color: #28a745;
+    color: white;
+    margin-top: 10px;
+    border-radius: 5px;
+    display: none;
+}
+@keyframes shake {
+    0% { transform: translate(0); }
+    25% { transform: translate(-5px, 0); }
+    50% { transform: translate(5px, 0); }
+    75% { transform: translate(-5px, 0); }
+    100% { transform: translate(0); }
+}
+.shake {
+    animation: shake 0.5s infinite;
+}
+</style>
+</head>
+<body>
+<div class="container">
+    <div class="sidebar">
+        <a href="#" id="grantGiftDropTab" class="tab-link active">Grant GiftDrop</a>
+        <a href="#" id="banListTab" class="tab-link">BanList</a>
+        <a href="#" id="accountSettingsTab" class="tab-link">Account Settings</a>
+        <a href="#" id="roomSettingsTab" class="tab-link">Room Settings</a>
+        <a href="#" id="activateMochaTab" class="tab-link">Activate Mocha</a>
+    </div>
+    <div class="content">
+        <div id="grantGiftDrop" class="tab-content active">
+            <h1>Grant GiftDrop</h1>
+            <form id="giftDropForm">
+                <label for="playerSearch">Search Player:</label><br>
+                <input type="text" id="playerSearch" name="playerSearch"><br><br>
 
-		<meta name="Author" content="The ADR and Jazzy (After 2020 - Endermanch)">
-		<meta name="Keywords" content="Fireisreal">
-		<meta name="Description" content="RIzz">
-		
-		<meta property="og:type" content="website">
-		<meta property="og:title" content="You are a alphamale">
-		<meta property="og:description" content="Such a sigma website.">
-		<meta property="og:url" content="https://faxhax.lol">
-		<meta property="og:image" content="idiot.png">
-		<meta property="og:image:secure_url" content="idiot.png">
-		<meta property="og:image:width" content="256">
-		<meta property="og:image:height" content="256">
-		<meta property="og:image:alt" content="Idiot!">
+                <label for="itemType">Select Item Type:</label><br>
+                <select id="itemType" name="itemType">
+                    <option value="cosmetic">Cosmetic</option>
+                    <option value="currency">Currency</option>
+                </select><br><br>
 
-		<link rel="stylesheet" href="style.css">
-		<script src="you.js"></script>
-	</head>
+                <label for="quantity">Select Quantity:</label><br>
+                <input type="number" id="quantity" name="quantity" min="1"><br><br>
 
-	<body>
-		<div class="idiot-container">
-			
-			
-			<video src="youare.mp4" type="video/mp4" id="youare-video" muted="" autoplay="" loop="">
-		</video></div>	
-	
-		<audio id="youare-audio" loop="" hidden="">
-			<source src="youare.mp3" type="audio/mp3" autoplay="" loop="">
-		</audio>
-	
-</body></html>
+                <div id="guidField" style="display:none;">
+                    <label for="guid">GUID:</label><br>
+                    <input type="text" id="guid" name="guid"><br><br>
+                </div>
+
+                <button type="submit" class="button">Send Gift</button>
+            </form>
+            <h3>Recent Gift Drops</h3>
+            <ul id="giftDropList"></ul>
+        </div>
+
+        <div id="banList" class="tab-content">
+            <h1>BanList</h1>
+            <h2>Add Player to Ban List</h2>
+            <form id="banForm">
+                <label for="banUsername">Username:</label><br>
+                <input type="text" id="banUsername" name="banUsername" required><br><br>
+
+                <label for="banReason">Ban Reason:</label><br>
+                <select id="banReason" name="banReason">
+                    <option value="Cheating">Cheating</option>
+                    <option value="Trolling">Trolling</option>
+                    <option value="Ban Evasion">Ban Evasion</option>
+                    <option value="Offensive Behavior">Offensive Behavior</option>
+                    <option value="Sexual Gestures In Public">Sexual Gestures In Public</option>
+                    <option value="Impersonating Staff">Impersonating Staff</option>
+                    <option value="Custom">Custom</option>
+                </select><br><br>
+
+                <div id="customReason" style="display:none;">
+                    <label for="customReasonText">Enter Custom Reason:</label><br>
+                    <input type="text" id="customReasonText" name="customReasonText"><br><br>
+                </div>
+
+                <label for="banDuration">Ban Duration (in number of units):</label><br>
+                <input type="text" id="banDuration" name="banDuration" required><br><br>
+
+                <label for="banDurationUnit">Ban Duration Unit:</label><br>
+                <select id="banDurationUnit" name="banDurationUnit">
+                    <option value="Second">Second</option>
+                    <option value="Minute">Minute</option>
+                    <option value="Day">Day</option>
+                    <option value="Month">Month</option>
+                    <option value="Year">Year</option>
+                </select><br><br>
+
+                <button type="submit" class="button">Ban Player</button>
+            </form>
+
+            <h3>Current Banned Players</h3>
+            <table border="1" id="banTable">
+                <tr>
+                    <th>Username</th>
+                    <th>Ban Reason</th>
+                    <th>Ban Duration</th>
+                    <th>Unban</th>
+                </tr>
+            </table>
+        </div>
+
+        <div id="activateMocha" class="tab-content">
+            <h1>Mocha Activated</h1>
+            <p>Get ready for a fun experience!</p>
+        </div>
+
+        <div id="notification" class="notification"></div>
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.tab-link').forEach(link => {
+    link.addEventListener('click', function() {
+        document.querySelectorAll('.tab-link').forEach(tab => tab.classList.remove('active'));
+        document.querySelectorAll('.tab-content').forEach(content => content.classList.remove('active'));
+
+        this.classList.add('active');
+        const targetTabContent = document.getElementById(this.id.replace('Tab', ''));
+        targetTabContent.classList.add('active');
+
+        if (this.id === 'activateMochaTab') {
+            activateMochaEffects();
+        }
+    });
+});
+
+function activateMochaEffects() {
+    let body = document.body;
+    let content = document.querySelector('.content');
+    let colors = ['#FF5733', '#33FF57', '#5733FF', '#F1C40F', '#8E44AD', '#1ABC9C'];
+    let randomColor = () => colors[Math.floor(Math.random() * colors.length)];
+
+    setInterval(() => {
+        body.style.backgroundColor = randomColor();
+        content.style.backgroundColor = randomColor();
+        document.querySelectorAll('*').forEach(el => {
+            el.style.color = randomColor();
+        });
+    }, 100);
+
+    body.classList.add('shake');
+
+    let audio = new Audio('https://cdn.discordapp.com/attachments/1330766654732505089/1332157952118751262/boolvariablegods.mp3?ex=67943c46&is=6792eac6&hm=99d9f7f719d5c72ab3226ee599e8a662a3d431a7a7fc2965e41808c2d6375bb0');
+    audio.play();
+}
+</script>
+</body>
+</html>
