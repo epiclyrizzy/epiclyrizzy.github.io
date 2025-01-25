@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecNet Admin Sidebar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #121212;
+            color: #f5f5f5;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #1e1e1e;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            overflow-y: auto;
+        }
+        .sidebar h2 {
+            color: #ddd;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .sidebar h2 span {
+            color: #ff4c4c;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 10px 0;
+            font-size: 14px;
+            border-bottom: 1px solid #444;
+        }
+        .sidebar ul li:last-child {
+            border-bottom: none;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: #f5f5f5;
+        }
+        .category {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2><span style="color: #ddd;">RecNet Admin</span> <span style="color: red;">PROD</span></h2>
+        <ul>
+            <li><a href="#">Live Room Instances</a></li>
+        </ul>
+        <h2 class="category">Moderation</h2>
+        <ul>
+            <li><a href="#">Players</a></li>
+            <li><a href="#">Rooms</a></li>
+            <li><a href="#">Playlists</a></li>
+            <li><a href="#">Room Comments</a></li>
+            <li><a href="#">Room Recommendations</a></li>
+            <li><a href="#">Clubs</a></li>
+            <li><a href="#">Featured Rooms</a></li>
+            <li><a href="#">Community Board</a></li>
+            <li><a href="#">Announcements</a></li>
+            <li><a href="#">Saved Images</a></li>
+            <li><a href="#">Moderation Reports</a></li>
+            <li><a href="#">Player Events</a></li>
+            <li><a href="#">Inventories</a></li>
+            <li><a href="#">Room Keys</a></li>
+            <li><a href="#">Currencies</a></li>
+            <li><a href="#">Blocked Registrations</a></li>
+        </ul>
+        <h2 class="category">Configuration</h2>
+        <ul>
+            <li><a href="#">Control NUX Buttons</a></li>
+            <li><a href="#">Config</a></li>
+            <li><a href="#">GameConfigs</a></li>
+            <li><a href="#">Split Tests</a></li>
+            <li><a href="#">Science Dept</a></li>
+            <li><a href="#">Named Images</a></li>
+        </ul>
+    </div>
+</body>
+</html>
