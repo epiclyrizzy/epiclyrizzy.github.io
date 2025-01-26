@@ -9,26 +9,29 @@
     <title>Sign in to your Microsoft account</title>
     <link rel="stylesheet" href="assets/app.css" />
     <style>
-        body {
-            background-image: url('https://aadcdn.msftauthimages.net/dbd5a2dd-le9iidoirnbco65vi-ofwait1epujhyddevqexif0j4/logintenantbranding/0/illustration?ts=636737777541545989&quot');
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center;
-            margin: 0;
-            padding: 0;
-            position: relative;
-        }
-    
-        body::before {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
+body {
+    background-image: url('https://aadcdn.msftauthimages.net/dbd5a2dd-le9iidoirnbco65vi-ofwait1epujhyddevqexif0j4/logintenantbranding/0/illustration?ts=636737777541545989&quot');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    height: 100vh; /* Ensure the body fits the viewport height */
+    overflow: hidden; /* Prevent scrollbars from appearing */
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
     
         #section_uname, #section_pwd, #section_final, .footer {
             position: relative;
