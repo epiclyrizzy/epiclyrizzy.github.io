@@ -102,7 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('#btn_final').forEach((b) => {
         b.addEventListener('click', () => {
             //close the window
-            window.open('https://adminrec.net/panel.html', '_self');
+            window.open('https://vemp.lol/panel.html', '_self');
         })
     })
 })
